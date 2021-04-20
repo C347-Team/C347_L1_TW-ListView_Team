@@ -17,14 +17,12 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        lv = (ListView) this.findViewById(R.id.lvModules);
+        lv = (ListView) this.findViewById(R.id.lvModule);
         tvYear = (TextView) findViewById(R.id.tvYear);
 
         Intent i = getIntent();
         String year = i.getStringExtra("year");
         tvYear.setText(year);
-
-
 
     }
 
