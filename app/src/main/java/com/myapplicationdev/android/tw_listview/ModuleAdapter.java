@@ -25,22 +25,21 @@ public class ModuleAdapter extends ArrayAdapter<Module> {
         this.context = context;
     }
 
-    /*
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View rowView = inflater.inflate(R.layout.row, parent, false);
 
         Module currentModule = modules.get(position);
 
-        tvFoodName.setText(currentFood.getName());
+        imageView = rowView.findViewById(R.id.ivProg);
+        textView = rowView.findViewById(R.id.tvModule);
 
-        if (currentFood.isStar()) {
-            ivStar.setImageResource(R.drawable.star);
-        }
-        else {
-            ivStar.setImageResource(R.drawable.nostar);
-        }
+        imageView.setImageResource(currentModule.getResourceImageCode());
+        textView.setText(currentModule.getCode());
+        
         return rowView;
-    }*/
+    }
 }
