@@ -39,7 +39,7 @@ public class ModuleAdapter extends ArrayAdapter<Module> {
 
         imageView.setImageResource(currentModule.getResourceImageCode());
         textView.setText(currentModule.getCode());
-        
+
         return rowView;
     }
 }
